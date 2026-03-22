@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+   <!-- Inclusão do Menu de Navegação -->
+    <%- include('partials/nav') %>
+  <header>
+    <h1>Fale Conosco</h1>
+  </header>
+  <form action="/faleconosco" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required title="Por favor, preencha o seu nome">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" required></textarea>
+    <input type="submit" value="Enviar">
+  </form>
+   <%- include('partials/footer') %>

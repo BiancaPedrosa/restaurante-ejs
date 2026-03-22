@@ -1,0 +1,25 @@
+<%- include('partials/head') %>
+   <!-- Inclusão do Menu de Navegação -->
+   <%- include('partials/nav') %>
+   <header>
+      <h1>Cardápio</h1>
+   </header>
+   <div class="container">
+      <table class="table table-striped">
+         <tr>
+               <th>Nome</th>
+               <th>Preço</th>
+         </tr>
+         <% if (produtos && produtos.length > 0) { %>
+               <% produtos.forEach(function(item) { %>
+                  <tr>
+                     <td><%= item.nome %></td>
+                     <td>R$ <%= item.preco.toFixed(2).replace('.', ',') %></td>
+                  </tr>
+               <% }); %>
+         <% } else { %>
+               <tr><td colspan="2">O cardápio está vazio no momento.</td></tr>
+         <% } %>
+      </table>
+   </div>
+ <%- include('partials/footer') %>

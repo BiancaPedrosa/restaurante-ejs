@@ -1,0 +1,35 @@
+<%- include('partials/head') %>
+ <!-- Inclusão do Menu de Navegação -->
+    <%- include('partials/nav') %>
+   <h1>Formulário de reserva</h1>
+   <form action="/reservas" method="POST">
+      <div class="form-group">
+         <label for="nome">Nome</label>
+         <input type="text" class="form-control" id="nome" name="nome" required>
+      </div>
+      <div class="form-group">
+         <label for="email">Email</label>
+         <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+         <div class="form-group">
+            <label for="data">Data</label>
+            <input type="date" class="form-control" id="data" name="data" required>
+         </div>
+         <div class="form-group">
+            <label for="hora">Hora</label>
+            <input type="time" class="form-control" id="hora" name="hora" required> 
+         </div>
+      </div>
+      <div class="form-group">
+            <label for="pessoas">Número de pessoas</label>
+            <input type="number" class="form-control" id="pessoas" name="pessoas" required>
+      </div>
+      <div class="form-group">
+            <label for="observacoes">Observações</label>
+            <textarea class="form-control" id="observacoes" name="observacoes"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Reservar</button>
+      <button type="reset" class="btn btn-secondary">Limpar</button>
+   </form>
+  <%- include('partials/footer') %>

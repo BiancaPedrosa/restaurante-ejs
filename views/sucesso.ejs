@@ -1,0 +1,13 @@
+<%- include('partials/head') %>
+    <!-- Inclusão do Menu de Navegação -->
+    <%- include('partials/nav') %>
+    
+    <div class="container container-sucesso">
+        <h1 class="titulo-sucesso">✅ <%= titulo %></h1>
+        <p class="mensagem-sucesso"><%= mensagem %></p>
+        
+        <!-- Botão dinâmico para voltar à página que originou a ação -->
+        <a href="<%= linkVoltar %>" class="btn btn-primary">Voltar</a>
+    </div>
+
+    <%- include('partials/footer') %>
